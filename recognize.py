@@ -13,7 +13,7 @@ if not cap.isOpened():
 
 # 2. تحميل قاعدة بيانات البصمات المسجلة من مجلد التسجيل (ENROLL_DIR)
 known_faces = {}
-enroll_dir = getattr(config, 'ENROLL_DIR', config.BASE_DIR / "enrolled")
+enroll_dir = getattr(config, config.ENROLL_DIR, config.BASE_DIR / "enrolled")
 
 if enroll_dir.exists():
     for file_path in enroll_dir.glob("*.npy"):
@@ -38,7 +38,7 @@ while True:
     for face in faces:
         # استخراج بصمة الوجه الحالي (شكلها متوافق مع similarity)
         current_embedding = engine.get_embedding(frame, face)
-        
+
         
         best_match_name = "Unknown"
         highest_similarity = 0.0
