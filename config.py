@@ -7,7 +7,7 @@ MODELS_DIR = BASE_DIR / "models"
 
 DETECTOR_MODEL = MODELS_DIR / "face_detection_yunet_2023mar.onnx"
 RECOGNIZER_MODEL = MODELS_DIR / "face_recognition_sface_2021dec.onnx"
-EMBEDDINGS_FILE = BASE_DIR / "embeddings.npz"
+ENROLL_DIR = BASE_DIR / "enrolled"
 
 # ---------- الكاميرا ----------
 CAMERA_INDEX = 0
